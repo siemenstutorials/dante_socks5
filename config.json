@@ -1,0 +1,224 @@
+{
+    "inbounds": [
+        {
+            "port": 45011, 
+            "listen": "0.0.0.0",
+            "protocol": "dokodemo-door",
+            "settings": {
+                "address": "15.235.115.10", 
+                "port": 9595, 
+                "network": "tcp,udp"
+            },
+            "tag": "",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ]
+            }
+        },
+        {
+            "port": 45012, 
+            "listen": "0.0.0.0",
+            "protocol": "dokodemo-door",
+            "settings": {
+                "address": "15.235.115.10", 
+                "port": 9595, 
+                "network": "tcp,udp"
+            },
+            "tag": "",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ]
+            }
+        },        
+        {
+            "port": 45002, 
+            "listen": "0.0.0.0",
+            "protocol": "dokodemo-door",
+            "settings": {
+                "address": "15.235.115.11", 
+                "port": 9595, 
+                "network": "tcp,udp"
+            },
+            "tag": "",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ]
+            }
+        },
+        {
+            "port": 45003, 
+            "listen": "0.0.0.0",
+            "protocol": "dokodemo-door",
+            "settings": {
+                "address": "15.235.115.12", 
+                "port": 9595, 
+                "network": "tcp,udp"
+            },
+            "tag": "",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ]
+            }
+        },
+        {
+            "port": 45004, 
+            "listen": "0.0.0.0",
+            "protocol": "dokodemo-door",
+            "settings": {
+                "address": "51.222.8.67", 
+                "port": 9595, 
+                "network": "tcp,udp"
+            },
+            "tag": "",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ]
+            }
+        },
+        {
+            "port": 45005, 
+            "listen": "0.0.0.0",
+            "protocol": "dokodemo-door",
+            "settings": {
+                "address": "15.235.54.33", 
+                "port": 9595, 
+                "network": "tcp,udp"
+            },
+            "tag": "",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ]
+            }
+        },                
+        {
+            "port": 45006, 
+            "listen": "0.0.0.0",
+            "protocol": "dokodemo-door",
+            "settings": {
+                "address": "15.235.115.14", 
+                "port": 9595, 
+                "network": "tcp,udp"
+            },
+            "tag": "",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ]
+            }
+        },
+        {
+            "port": 45007, 
+            "listen": "0.0.0.0",
+            "protocol": "dokodemo-door",
+            "settings": {
+                "address": "15.235.115.15", 
+                "port": 9595, 
+                "network": "tcp,udp"
+            },
+            "tag": "",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ]
+            }
+        },
+        {
+            "port": 45008, 
+            "listen": "0.0.0.0",
+            "protocol": "dokodemo-door",
+            "settings": {
+                "address": "15.235.115.6", 
+                "port": 9595, 
+                "network": "tcp,udp"
+            },
+            "tag": "",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ]
+            }
+        }, 
+        {
+            "port": 9595, 
+            "listen": "0.0.0.0",
+            "protocol": "dokodemo-door",
+            "settings": {
+                "address": "15.235.115.9", 
+                "port": 9595, 
+                "network": "tcp,udp"
+            },
+            "tag": "",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ]
+            }
+        },
+        {
+            "port": 8090, 
+            "listen": "0.0.0.0",
+            "protocol": "dokodemo-door",
+            "settings": {
+                "address": "15.235.118.145", 
+                "port": 9595, 
+                "network": "tcp,udp"
+            },
+            "tag": "",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ]
+            }
+        }                                                       
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "settings": {}
+        },
+        {
+            "protocol": "blackhole",
+            "settings": {},
+            "tag": "blocked"
+        }
+    ],
+    "routing": {
+        "rules": [
+            {
+                "type": "field",
+                "ip": [
+                    "geoip:private"
+                ],
+                "outboundTag": "blocked"
+            }
+        ]
+    }
+}
